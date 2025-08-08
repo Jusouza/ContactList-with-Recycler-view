@@ -2,6 +2,7 @@ package com.devspace.recyclerview
 
 import android.media.Image
 import android.os.Bundle
+import android.util.Log
 import android.widget.ImageView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,14 +47,14 @@ class MainActivity : AppCompatActivity() {
             rvList.layoutManager = LinearLayoutManager(this)
         }
 
+        adapter.setOnClickListener { contact ->
+            Log.d("JU", contact.toString())
+        }
     }
 
 
-    fun changeToGrid(){
+    private fun changeToGrid(){
 
     }
 
-    fun changeToList(){
-
-    }
 }
